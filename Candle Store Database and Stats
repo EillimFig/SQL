@@ -1,0 +1,43 @@
+
+/** Candles:
+Lavender (8) (19) (4.8)
+Clean Linen (5) (18) (4.8)
+Apricot Nectar (15) (19) (4.9)
+Basil & Amber (9) (18) (4.5)
+Dark Plum (4) (19) (4)
+Earth (11) (18) (4.1)
+Driftwood & Argan (6) (19) (4.2)
+Fig & Vine (3) (18) (5)
+Forest Floor (8) (19) (4.8)
+Ginger Tea (9) (18) (4.7)
+Jasmine & Honey (12) (19) (4.5)
+Lemon & Rose (7) (18) (4)
+Morning Dew (6) (19) (4.4)
+Redwoods (10) (18) (4.3)
+Tropical Paridise (8) (19) (4.9)
+**/
+
+CREATE TABLE Candles (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, rating INTEGER); 
+
+INSERT INTO Candles VALUES (1, "Lavendar", 8, 19, 4.8);
+INSERT INTO Candles VALUES (2, "Clean Linen", 5, 18, 4.8);
+INSERT INTO Candles VALUES (3, "Apricot Nectar", 15, 19, 4.9);
+INSERT INTO Candles VALUES (4, "Basil & Amber", 9, 18, 4.5);
+INSERT INTO Candles VALUES (5, "Dark Plum", 4, 19, 4);
+INSERT INTO Candles VALUES (6, "Earth", 11, 18, 4.1);
+INSERT INTO Candles VALUES (7, "Driftwood & Argan", 6, 19, 4.2);
+INSERT INTO Candles VALUES (8, "Fig & Vine", 3, 18, 5);
+INSERT INTO Candles VALUES (9, "Forest Floor", 8, 19, 4.8);
+INSERT INTO Candles VALUES (10, "Ginger Tea", 9, 18, 4.7);
+INSERT INTO Candles VALUES (11, "Jasmine & Honey", 12, 19, 4.5);
+INSERT INTO Candles VALUES (12, "Lemon & Rose", 7, 18, 4);
+INSERT INTO Candles VALUES (13, "Morning Dew", 6, 19, 4.4);
+INSERT INTO Candles VALUES (14, "Redwoods", 10, 18, 4.3);
+INSERT INTO Candles VALUES (15, "Tropical Paridise", 8, 19, 4.9);
+
+--Display the database ordered by rating.
+SELECT * FROM Candles ORDER BY rating asc;
+
+--What is the sum of items in stock
+SELECT SUM(quantity) FROM Candles
+
