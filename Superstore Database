@@ -26,21 +26,22 @@ VALUES
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
 #Use a SELECT statement to order the items by price.
-SELECT item_name, price, average_rating
+SELECT *
 FROM superstore
 ORDER BY price desc;
 
-#Show statistics for category Kitchen supplies
-SELECT item_name, category, price, average_rating
+#Show average prices for each category
+SELECT AVG(price), category
 FROM superstore
-WHERE category = 'Kitchen Supplies'
+GROUP BY category;
 
-#Show a average price and rating for the category Kitchen Supplies
-SELECT category, Avg(price), AVG(average_rating)
+#Show the max price of an item for the category Kitchen Supplies
+SELECT MAX(price), category
 FROM superstore
-WHERE category = 'Kitchen Supplies';
+WHERE category="Kitchen Supplies";
 
-#Show statistic for the item Non-Stick Baking Set
-SELECT item_name, category, price, average_rating
+#Show items with an average rating of 4.5 or higher in the superstore table
+SELECT *
 FROM superstore
-WHERE item_name = 'Non-Stick Baking Set';
+WHERE average_rating >= "4.5"
+ORDER BY average_rating desc;
